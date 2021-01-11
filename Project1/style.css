@@ -1,0 +1,143 @@
+.headimage1{         /*header image formats for index*/
+  width:10%;
+  height: inherit;
+  float:left;
+}
+.headimage2{
+  width:10%;
+  height: inherit;
+  float:right;
+}
+.header1{        /*index header with two images*/
+  width:100%;
+  height: 5%;
+  float: left;
+  margin-bottom: 2%;
+}
+.northernlights{             /*Pink box contatiner*/
+  border: 2px solid black;
+  background-color: lightpink;
+  color: white;
+  width:100%;
+  height: 750px;
+}
+.image{               /*image formatting for main pages*/
+  width:80%;
+}
+.imagesubblock1{
+  width:40%;
+  height: 30%;
+  float: left;
+  margin-left: 10%;
+}
+
+.imagesubblock2{
+  width:40%;
+  height: 30%;
+  float: left;
+  margin-bottom: 20%;
+  margin-left: 10%;
+}
+
+.textblock1{
+  font-size: 18px;
+  width:40%;
+  height: 40%;
+  float:left;
+  margin-right: 5%;
+}
+
+.textblock2{
+  font-size: 18px;
+  width:40%;
+  height: 40%;
+  float:left;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.table{
+  border: 2px solid;
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  /* float: left; */
+}
+.contactlogo{
+  width:3%;
+  margin-right: 2%;
+  margin-left: 5%;
+  display: block;
+}
+.container{                /*hiking and northern lights*/
+  width:100%;
+  height: 300px;
+}
+.image2{
+  width:100%;
+  border:3px solid;
+}
+.imageblock1{    /*image subblock for hike and lights*/
+  width:30%;
+  height:80%;
+  float:left;
+  margin-right: 1%;
+  margin-left: 1%;
+  display: flex;
+  align-content: center;
+}
+.imageblock2{               /*text subblock settings for hike and lights*/
+  background-color: linen;
+  border:4px solid steelblue;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 20px;
+}
+.bottomnav{
+  text-align: center;
+  font-size: 20px;
+  height: 70px;
+}
+.bottomnav a{
+  padding-right: 1%;
+  padding-left: 1%;
+  padding-bottom: 20px;
+}
+.title{
+  font:25px arial, sans serif;
+  text-align: center;
+}
+.form{
+  
+}
+.button{
+  background-color: black;
+  border:none;
+  font-size: 16px;
+  color: lightgrey;
+  padding: 20px;
+}
+.button:hover{
+  background-color: grey;
+}
+/* .menubox{
+ background-color: powderblue;
+ font-size:20px;
+ height: 60px;
+ padding: 0px 20px;
+ text-align: center;
+}
+
+.menubox a {
+display: inline-block;
+text-decoration: none;
+padding-top: 14px;
+padding-right: 8%;
+padding-left: 8%;
+padding-bottom: 24px;
+}
+
+.menubox a:hover{
+   background-color: orange;
+} */
