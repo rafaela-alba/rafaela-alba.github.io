@@ -1,0 +1,57 @@
+.container{
+  width: 600px;
+  height: 600px;
+  position: absolute;
+}
+
+.clock{
+  background-color: thistle;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.clock img{
+  width: 100%;
+}
+
+.minute{
+  position: absolute;
+  width: 35%;
+  height: 75px;
+  top: 44%;
+  left: 50%;
+
+  transform-origin: left;
+  animation: minute;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+
+}
+
+.hour{
+  position: absolute;
+  width: 27%;
+  height: 75px;
+  top: 44%;
+  left: 50%;
+
+  transform-origin: left;
+  animation: hour;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes minute {
+  from {transform: rotate(-90deg)}
+  to {transform: rotate(270deg)}
+}
+
+@keyframes hour {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(30deg)}
+}
