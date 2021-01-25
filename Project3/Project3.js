@@ -45,7 +45,7 @@ function check() {
     if (isNaN(guess) || guess < 1 || guess > 100) {
         score = score;
     }
-    if (guess !== secretNumber) {
+    else if (guess !== secretNumber) {
         score--;
     };
 
