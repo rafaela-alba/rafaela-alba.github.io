@@ -42,6 +42,9 @@ function check() {
         message.textContent = 'Too low';
     }
 
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+        score = score;
+    }
     if (guess !== secretNumber) {
         score--;
     };
