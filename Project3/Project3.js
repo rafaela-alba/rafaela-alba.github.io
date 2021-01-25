@@ -1,5 +1,4 @@
-let secretNumber = 60; //Math.trunc(Math.random() * 100) + 1;
-
+let secretNumber = Math.trunc(Math.random() * 100) + 1;
 const enterGuess = document.querySelector('.enterGuess'); //button
 const guessBox = document.querySelector('.guessBox'); //textbox
 const message = document.querySelector('.instruct');
@@ -10,6 +9,8 @@ let highScore = 0;
 enterGuess.addEventListener('click', check);
 
 function check() {
+
+    // console.log(secretNumber);
 
     let guess = Number(guessBox.value); //user guess
 
@@ -36,11 +37,9 @@ function check() {
     }
     else if (guess > secretNumber) {
         message.textContent = 'Too high!';
-
     }
     else {
         message.textContent = 'Too low';
-
     }
 
     if (guess !== secretNumber) {
@@ -53,7 +52,14 @@ function check() {
 reset.addEventListener('click', playAgain);
 
 function playAgain() {
+    enterGuess.style.display = 'block';
+    document.querySelector('body').style.background = 'linear-gradient(to top right, #992ed4, #e6db9d)';
+    document.querySelector('.mysteryBox').textContent = `?`;
+    guessBox.value = '';
     score = 10;
-
+    message.textContent = 'Start Guessing';
+    document.querySelector('.score').textContent = `Score: ${score}`;
+    document.querySelector('.highScore').textContent = `Highscore: ${highScore}`;
+    secretNumber = Math.trunc(Math.random() * 100) + 1;
 }
 
