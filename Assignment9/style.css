@@ -1,0 +1,49 @@
+body {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(to top right, #e471b8, #ebe39d);
+    align-items: center;
+}
+
+.buttons {
+    padding: 2%;
+    font-size: 20px;
+    border-radius: 30px;
+    margin: auto;
+}
+
+.buttons:hover {
+    background-color: gray;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.infobox {
+    width: 50%;
+    height: 30%;
+    background-color: white;
+    margin: auto;
+    margin-top: 10%;
+    padding: 2%;
+}
+
+.close {
+    margin-left: 95%;
+    font-size: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.close:hover {
+    color: white;
+    background-color: gray;
+}
