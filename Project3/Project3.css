@@ -1,0 +1,33 @@
+body{
+    height: 800px;
+    background:linear-gradient(to top right, #992ed4, #e6db9d); 
+  }
+
+  .button{
+    padding: 3%;
+    margin-left: 80%;
+    border-radius: 10px;
+    background-color: rgb(139, 202, 218);
+    border: solid 2px rgb(229, 255, 0);
+    color: white;
+  }
+
+  .mysteryBox{
+    color: black;
+    box-shadow: 5px, 5px black;
+    background-color: white;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+
+   .userInputBox{
+    display: block;
+    margin-left: 65%;
+    margin-bottom: 5%;
+    width:50%;
+    height: 75%;
+    text-align: center;
+    font-size: 45px;
+  }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="Project3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-light mt-3">
+            <div class="col-sm-6">
+                <p>Guess a number between 1 and 100</p>
+            </div>
+            <div class="col-sm-6"><button type="submit" name="reset" class="float-right button reset">New
+                    Game!</button>
+            </div>
+        </div>
+        <div class="row text-light d-flex justify-content-center mb-2">
+            <h1 class="w-100 text-center">Guess the Number!</h1>
+            <div class="w-25">
+                <p class="mysteryBox">?</p>
+            </div>
+        </div>
+        <div class="row text-light">
+            <div class="col-sm-3 pl-5 m-5">
+                <p class="instruct">Start Guessing</p>
+                <p class="score">Score: 10</p>
+                <p class="highScore">Highscore: 0</p>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" id="guessBox" class="bg-transparent border border-color-light userInputBox guessBox">
+                <button type="submit" name="check" class="button enterGuess">Check!</button>
+            </div>
+        </div>
+    </div>
+    <script src="Project3.js"></script>
+
+</body>
+
+</html>
