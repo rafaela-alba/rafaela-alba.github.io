@@ -3,7 +3,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'Test',
-    password: 'Alcelia48!',
+    password: 'your_password',
     port: 5432
 })
 
@@ -18,6 +18,7 @@ const addCustomer = (request, response) => {
     })
 }
 
+// This function under construction
 const addCartItem = (request, response) => {
     const { product1_qty, product2_qty, product3_qty } = request.body
 
