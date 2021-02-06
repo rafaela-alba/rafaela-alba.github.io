@@ -1,0 +1,78 @@
+-- Database: Test
+
+-- DROP DATABASE "Test";
+
+CREATE DATABASE "Test"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'English_United States.1252'
+    LC_CTYPE = 'English_United States.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+	
+	
+CREATE TABLE products (
+	id SERIAL PRIMARY KEY,
+	product_name VARCHAR(50),
+	product_cost NUMERIC(5,2),
+	product_stock_qty INT,
+	product_stock_chk BOOLEAN
+)
+CREATE TABLE customer (
+	id SERIAL PRIMARY KEY,
+	first_name VARCHAR(30),
+	last_name VARCHAR(30),
+	email VARCHAR(60),
+	address VARCHAR(100)
+)
+CREATE TABLE shopping_cart (
+	customer_id INT REFERENCES customer (id),
+	product_id INT REFERENCES products (id),
+	product_order_qty INT
+)
+		
+INSERT INTO products(
+	product_name,
+	product_cost,
+	product_stock_qty
+)
+VALUES ('test2', 10.00, 12)
+	
+INSERT INTO customer (
+	first_name,
+	last_name,
+	email,
+	address
+)
+VALUES('Jane','Dove','jd@gmail.com','255 Main st New York,NY 10045')
+
+UPDATE products
+SET product_stock_chk = FALSE
+WHERE product_stock_qty = 0
+
+DELETE FROM products WHERE id>1;
+
+SELECT * FROM products
+SELECT * FROM customer
+SELECT * FROM shopping_cart
+
+INSERT INTO shopping_cart(
+	customer_id,
+	product_id,
+	product_order_qty
+) VALUES (2,4,10)
+
+SELECT sc.customer_id, sc.product_id, SUM(sc.product_order_qty*p.product_cost) AS order_total
+FROM shopping_cart sc
+JOIN products p ON sc.product_id = p.id
+GROUP BY sc.customer_id, sc.product_id
+
+ALTER TABLE customer
+ADD UNIQUE (email)
+
+UPDATE customer
+SET email = 'jd123@gmail.com'
+WHERE first_name = 'Jane'
+
+
