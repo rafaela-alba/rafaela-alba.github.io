@@ -5,9 +5,9 @@ const port = 3000
 const db = require('./queries')
 const path = require('path')
 
-app.use(express.static('style.css'))
+app.use(express.static('public'))
 
-app.get('/', function (req, res) {
+app.get('/shop', function (req, res) {
     res.sendFile(path.join(__dirname + '/templates/index.html'))
 })
 
@@ -18,9 +18,10 @@ app.use(
     })
 )
 
-app.post('/customer', db.addCustomer)
-app.post('/cart', db.addCartItem)
-
+app.post('/shop', db.addCustomer)
+app.post('/shop:product', db.addCartItem)
+app.post('/shop:product', db.addCartItem)
+app.post('/shop:product', db.addCartItem)
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)

@@ -3,7 +3,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'Test',
-    password: 'your_password',
+    password: 'Alcelia48!',
     port: 5432
 })
 
@@ -14,22 +14,40 @@ const addCustomer = (request, response) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`Customer info added with ID: ${results.insertId}`)
+        response.status(201).send(`Customer info added`)
     })
+
 }
 
-// This function under construction
 const addCartItem = (request, response) => {
     const { product1_qty, product2_qty, product3_qty } = request.body
 
-    pool.query('INSERT INTO shopping_cart (customer_id, product_id, product_order_qty) VALUES ($1, $2, $3)', [product1_qty, product2_qty, product3_qty], (error, results) => {
-        if (error) {
-            throw error
-        }
-        response.status(201).send(`Item added to cart with ID: ${results.insertId}`)
-
-    })
+    if (product1_qty != null) {
+        pool.query('INSERT INTO shopping_cart (product_id, product_order_qty) VALUES (5, $1)', [product1_qty], (error, results) => {
+            if (error) {
+                throw error
+            }
+            response.status(201).send(`Item added to cart`)
+        })
+    }
+    if (product2_qty != null) {
+        pool.query('INSERT INTO shopping_cart (product_id, product_order_qty) VALUES (6, $1)', [product2_qty], (error, results) => {
+            if (error) {
+                throw error
+            }
+            response.status(201).send(`Item added to cart`)
+        })
+    }
+    if (product3_qty != null) {
+        pool.query('INSERT INTO shopping_cart (product_id, product_order_qty) VALUES (7, $1)', [product3_qty], (error, results) => {
+            if (error) {
+                throw error
+            }
+            response.status(201).send(`Item added to cart`)
+        })
+    }
 }
+
 
 module.exports = {
     pool,
